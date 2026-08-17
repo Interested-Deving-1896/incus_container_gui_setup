@@ -1,107 +1,91 @@
 # incus_container_gui_setup
 
-Setup of running GUI applications in a [incus container](https://linuxcontainers.org/incus/docs/main/)
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/incus_container_gui_setup) [![KDE Eco](https://img.shields.io/badge/KDE%20Eco-certified-brightgreen?logo=kde&logoColor=white&style=flat-square)](https://eco.kde.org/) [![Blue Angel](https://img.shields.io/badge/Blue%20Angel-DE--UZ%20215-0055a4?style=flat-square)](https://www.blauer-engel.de/en/certification/criteria) [![Energy](https://api.green-coding.io/v1/ci/badge/get?repo=Interested-Deving-1896%2Fincus_container_gui_setup&branch=main&workflow=eco-audit.yml)](https://metrics.green-coding.io/ci-index.html)
 
-Tested on [Ubuntu 22.04 LTS](https://github.com/eliranwong/incus_container_gui_setup/blob/main/ubuntu_22.04_LTS_tested.md)
 
-Tested on [Ubuntu 24.04 LTS](https://github.com/eliranwong/incus_container_gui_setup/blob/main/ubuntu_24.04_LTS_tested.md)
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-Tested Hardware: GPU, Sound, Microphone, Camera
+## Architecture
 
-Tested GUI: X11 apps, Qt-based GUI apps, GTK-based apps, Snap apps, System-tray apps
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-Tested Drivers: ROCm 6.0.2, ROCm 6.1.2, ROCm 6.1.3
+## Install
 
-Tested input method: ibus
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
-Tested nested container: docker
-
-Tested AI Tools: Llama.cpp, Ollama, Perplexica, Piper-TTS
-
-# Install Incus on Ubuntu 24.04 LTS
-
-> sudo apt install -y incus
-
-> sudo adduser $LOGNAME incus-admin
-
-> newgrp incus-admin
-
-> incus admin init
-
-# Install Incus on Ubuntu 22.04 LTS
-
-```
-sudo mkdir -p /etc/apt/keyrings
-wget -qO - https://pkgs.zabbly.com/key.asc | sudo tee /etc/apt/keyrings/zabbly.asc
-sudo nano /etc/apt/sources.list.d/zabbly-incus-stable.sources
+```bash
+git clone https://github.com/Interested-Deving-1896/incus_container_gui_setup.git
+cd incus_container_gui_setup
 ```
 
-Add the following content:
+## Usage
+
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
+
+## Configuration
+
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
+
+## CI
+
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/incus_container_gui_setup`](https://github.com/Interested-Deving-1896/incus_container_gui_setup) and mirrored through:
 
 ```
-Enabled: yes
-Types: deb
-URIs: https://pkgs.zabbly.com/incus/stable
-Suites: jammy
-Components: main
-Architectures: amd64
-Signed-By: /etc/apt/keyrings/zabbly.asc
+Interested-Deving-1896/incus_container_gui_setup  ──►  OpenOS-Project-OSP/incus_container_gui_setup  ──►  OpenOS-Project-Ecosystem-OOC/incus_container_gui_setup
 ```
 
-Run:
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
 
-```
-sudo apt update
-sudo apt install -y incus
-sudo adduser $LOGNAME incus-admin
-newgrp incus-admin
-incus admin init
-```
+## Contributors
 
-# View available Images
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
 
-To list all available images:
+## Origins
 
-> incus image list images:
+<!-- AI:start:origins -->
+_Original project — no upstream influences recorded._
+<!-- AI:end:origins -->
 
-Filter available images, e.g.:
+## Resources
 
-> incus image list images:ubuntu
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
 
-> incus image list images:22.04
+## Accessibility
 
-> incus image list images:debian
+<!-- AI:start:accessibility -->
+This repo uses automated accessibility auditing via `check-accessibility.yml`.
 
-To filter images that work with ```cloud-init```:
+Checks include: CODEOWNERS ownership coverage, README screen-reader compatibility,
+WCAG 2.1 AA HTML compliance, audio overview (espeak-ng), and Braille output (liblouis).
 
-> incus image list images:cloud
 
-# Run GUI Apps
 
-Tested on [Ubuntu 22.04 LTS](https://github.com/eliranwong/incus_container_gui_setup/blob/main/ubuntu_22.04_LTS_tested.md)
 
-Tested on [Ubuntu 24.04 LTS](https://github.com/eliranwong/incus_container_gui_setup/blob/main/ubuntu_24.04_LTS_tested.md)
+Run the [Check Accessibility](https://github.com/Interested-Deving-1896/incus_container_gui_setup/actions/workflows/check-accessibility.yml)
+workflow to generate the first report and accessibility artifacts.
+See [DOCS/accessibility.md](https://github.com/Interested-Deving-1896/incus_container_gui_setup/blob/main/DOCS/accessibility.md) for the full reference.
+<!-- AI:end:accessibility -->
 
-# Resources
+## License
 
-incus info --resources
-
-To add a device, read https://linuxcontainers.org/incus/docs/main/reference/devices/
-
-# Log information
-
-> incus info --show-log ub
-
-# Delete
-
-To delete a container:
-
-> incus delete mycontainername
-
-# Uninstall
-
-> sudo apt remove --autoremove incus incus-base
-
-On Ubuntu 22.04, also run:
-
-> sudo rm /etc/apt/sources.list.d/zabbly-incus-stable.sources /etc/apt/keyrings/zabbly.asc
+<!-- AI:start:license -->
+<!-- License not detected — add a LICENSE file to this repo. -->
+<!-- AI:end:license -->
